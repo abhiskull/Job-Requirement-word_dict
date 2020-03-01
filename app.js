@@ -197,7 +197,7 @@ var playDict = function(){
                         }else{
                             var res = JSON.parse(res.body);
                             randomWordData.push({synAnt: res});
-                            console.log("---------Dictionary Game----------");
+                            console.log("\n", "---------Dictionary Game----------");
                             console.log("Guess the word using given information");
                             console.log("---------------------------------------------");
                             
@@ -214,7 +214,7 @@ var playDict = function(){
                                     initGameInfo();
                                 }else if(userInput === '2'){
                                     var result = gameDataGenerator()
-                                    console.log(result[0], "\n", result[1]);
+                                    console.log("\n", result[0], "\n", result[1]);
                                 }else{
                                     process.exit(0);
                                 }
@@ -244,9 +244,11 @@ var playDict = function(){
                                     }
                                 ]).then(function(data) {
                                         if(data.guessWord != randomWordData[0].ranWord){
+                                            console.log("Wrrong Guess", "\n");
                                             failedRes();
                                         }else{
                                             console.log("success");
+                                            process.exit(0);
                                         }
                                 });
                             }
