@@ -92,7 +92,7 @@ var dictFunction = function(){
         }else{
             return randomWords();
         }
-        rl.close();
+        rl.close(); //
     });
     
     rl.on("close", function() {
