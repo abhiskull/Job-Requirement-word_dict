@@ -1,6 +1,8 @@
 # word_dict
 
 ==> Make sure Node and Npm install in you system 
+(node version 6 or higher)
+
 
 Open cmd in your system and go to you project path
 Run given cmd:-
